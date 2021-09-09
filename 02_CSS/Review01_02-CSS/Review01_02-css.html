@@ -1,0 +1,381 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Review01-CSS Syntex</title>
+  </head>
+  <body>
+    <h1>Review01-CSS Syntax</h1>
+    <br />
+    <div class="">
+      <table>
+        <tr>
+          <th><h3>CSS syntax</h3></th>
+          <th><h3>CSS writings styles</h3></th>
+          <th><h3>Selector</h3></th>
+          <th><h3>Combinator</h3></th>
+        </tr>
+        <tr>
+          <td>Answers: selector { property: value;}</td>
+          <td>
+            <ul>
+              <li>Inline</li>
+              <li>Internal</li>
+              <li>Extenal</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Class selector</li>
+              <li>ID Selectors</li>
+              <li>TAG Selector</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Descendant Selector</li>
+              <li>Child Selector</li>
+              <li>Adjacent Sibling Selector</li>
+              <li>General Sibling Selector css3</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <br />
+      <div>
+        <article>
+          <h2>For example CSS Syntax</h2>
+          <p>h1 {color: blue; font-size:12px}</p>
+        </article>
+        <br />
+        <article>
+          <h2>For example CSS Writings styles</h2>
+
+          <div>
+            <article>
+              <h4>Inline Style</h4>
+              <p>
+                &lt;p style=”font-size: 0.9em; width: 200px; border: solid 1px
+                #000000”&gtตัวหนังสือสีดำ อยู่ใน แทก &lt;/p&gt;
+              </p>
+              <h4>Internal Style</h4>
+              <p>
+                การเขียนแบบ Internal (embedded) คือเขียนแยก CSS ออกจาก tag
+                [X]HTML แต่อยู่ในหน้าเดียวกันกับไฟล์ [X]HTML โดยแทรก css
+                เอาไว้ที่ &lt;head&gt;&lt;/head&gt; เช่น
+                <img src="./img/Internal Style.PNG" />
+              </p>
+              <h4>External Style</h4>
+              <p>
+                คือการเขียน แยก css ออกมาเป็นไฟล์ .css ต่างหาก แล้วนำเข้าไปใช้ใน
+                หน้าเว็บด้วย การเรียกโดย ใช้ โดยการพิมพ์ &lt;link
+                rel="stylesheet" href="externalcss.css" type="text/css" /&gt;
+                ไว้ที่ส่วน &lt;head&gt;&lt;/head&gt;ของหน้าเว็บ
+              </p>
+            </article>
+          </div>
+        </article>
+        <br />
+        <article>
+          <h2>For example CSS Selector</h2>
+          <div>
+            <h2>1. CLASS SELECTOR</h2>
+            <pre>
+            &lt;style&gt;
+              .myclass{
+                font: bold 12px Tahoma;color: #009;
+              }
+            &lt;/style&gt;
+          </pre
+            >
+            <h3>วิธีการใช้งาน</h3>
+            <pre>
+            &lt;p class='myclass'&gt;Test to changeColor&lt;/p&gt;
+          </pre
+            >
+          </div>
+          <div>
+            <h2>1. ID SELECTOR</h2>
+            <pre>
+            &lt;style&gt;
+              .myclass{
+                font: bold 12px Tahoma;color: #009;
+              }
+            &lt;/style&gt;
+          </pre
+            >
+            <h3>วิธีการใช้งาน</h3>
+            <pre>
+            &lt;p class='myclass'&gt;Test to changeColor&lt;/p&gt;
+          </pre
+            >
+          </div>
+        </article>
+        <br />
+        <article>
+          <h2>For example CSS Combinator</h2>
+          <p>
+            ตัวอย่างการใช้งาน comainator Descendant Select จะเป็นการเลือก
+            element ที่อยู่ด้านในทั้งหมด ตัวอย่างการใช้งาน
+          </p>
+          <pre>
+            &lt;style&gt;
+              div p {
+                background-color: skyblue;
+              }
+            &lt;/style&gt;
+            --------------------------------------------------
+            &lt;article&gt;
+  &lt;h1&gt;Descendant Selector&lt;/h1&gt;
+  &lt;div&gt;
+    &lt;p&gt;Descendant Selector 1&lt;/p&gt;
+    &lt;p&gt;Descendant Selector 2&lt;/p&gt;
+    &lt;section&gt;
+      &lt;p&gt;Descendant Selector 3&lt;/p&gt;
+      &lt;p&gt;Descendant Selector 4&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Descendant Selector 5&lt;/p&gt;
+  &lt;p&gt;Descendant Selector 6&lt;/p&gt;
+</article>
+
+          </pre>
+          <img src="/img/combinator.png" alt="">
+        </article>
+      </div>
+    </div>
+    
+    <div>
+      <h1>Reviews 2 </h1>
+      <table>
+        <th>Property</th>
+        <th>Values</th>
+        <th colspan='2'>Unit</th>
+        <tr>
+          <td>คุณสมบัติของ css เช่น width, height, position</td>
+          <td>คือค่าของ property นั้นๆ ครับ เช่น 500px สำหรับความกว้าง</td>
+          <td><ul>
+            <h4>Absolute</h4>
+            <li>cm (centimeters)</li>
+            <li>mm (millimeters)</li>
+            <li>in (inches)</li>
+            <li>px  (pixels)</li>
+            <li>pt (points)</li>
+            <li>pc (picas</li>
+          </ul>
+          </td>
+          <td><ul>
+            <h4>Relative</h4>
+            <li>em (Relative to the font size</li>
+            <li>ex (Relative to x-height of the current font</li>
+            <li>ch (Relative to width of the 0</li>
+            <li>rem (Relative to font-size of the root element</li>
+            <li>vw (Relative 1% on width of the viewport</li>
+            <li>vh (Relative 1% on height of the hight viewport</li>
+            <li>vmin (Relative1% of viewport * small dimersion</li>
+            <li>vmax (Relative to 1% viewport * large dimersion</li>
+            <li>% (Relative to the parent element</li>
+          </ul></td>
+        </tr>
+      </table>
+
+      <br><br><br>
+      <h1>By Piriya codecamp 9</h1>
+    </div>
+  </body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Review01-CSS Syntex</title>
+  </head>
+  <body>
+    <h1>Review01-CSS Syntax</h1>
+    <br />
+    <div class="">
+      <table>
+        <tr>
+          <th><h3>CSS syntax</h3></th>
+          <th><h3>CSS writings styles</h3></th>
+          <th><h3>Selector</h3></th>
+          <th><h3>Combinator</h3></th>
+        </tr>
+        <tr>
+          <td>Answers: selector { property: value;}</td>
+          <td>
+            <ul>
+              <li>Inline</li>
+              <li>Internal</li>
+              <li>Extenal</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Class selector</li>
+              <li>ID Selectors</li>
+              <li>TAG Selector</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Descendant Selector</li>
+              <li>Child Selector</li>
+              <li>Adjacent Sibling Selector</li>
+              <li>General Sibling Selector css3</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <br />
+      <div>
+        <article>
+          <h2>For example CSS Syntax</h2>
+          <p>h1 {color: blue; font-size:12px}</p>
+        </article>
+        <br />
+        <article>
+          <h2>For example CSS Writings styles</h2>
+
+          <div>
+            <article>
+              <h4>Inline Style</h4>
+              <p>
+                &lt;p style=”font-size: 0.9em; width: 200px; border: solid 1px
+                #000000”&gtตัวหนังสือสีดำ อยู่ใน แทก &lt;/p&gt;
+              </p>
+              <h4>Internal Style</h4>
+              <p>
+                การเขียนแบบ Internal (embedded) คือเขียนแยก CSS ออกจาก tag
+                [X]HTML แต่อยู่ในหน้าเดียวกันกับไฟล์ [X]HTML โดยแทรก css
+                เอาไว้ที่ &lt;head&gt;&lt;/head&gt; เช่น
+                <img src="./img/Internal Style.PNG" />
+              </p>
+              <h4>External Style</h4>
+              <p>
+                คือการเขียน แยก css ออกมาเป็นไฟล์ .css ต่างหาก แล้วนำเข้าไปใช้ใน
+                หน้าเว็บด้วย การเรียกโดย ใช้ โดยการพิมพ์ &lt;link
+                rel="stylesheet" href="externalcss.css" type="text/css" /&gt;
+                ไว้ที่ส่วน &lt;head&gt;&lt;/head&gt;ของหน้าเว็บ
+              </p>
+            </article>
+          </div>
+        </article>
+        <br />
+        <article>
+          <h2>For example CSS Selector</h2>
+          <div>
+            <h2>1. CLASS SELECTOR</h2>
+            <pre>
+            &lt;style&gt;
+              .myclass{
+                font: bold 12px Tahoma;color: #009;
+              }
+            &lt;/style&gt;
+          </pre
+            >
+            <h3>วิธีการใช้งาน</h3>
+            <pre>
+            &lt;p class='myclass'&gt;Test to changeColor&lt;/p&gt;
+          </pre
+            >
+          </div>
+          <div>
+            <h2>1. ID SELECTOR</h2>
+            <pre>
+            &lt;style&gt;
+              .myclass{
+                font: bold 12px Tahoma;color: #009;
+              }
+            &lt;/style&gt;
+          </pre
+            >
+            <h3>วิธีการใช้งาน</h3>
+            <pre>
+            &lt;p class='myclass'&gt;Test to changeColor&lt;/p&gt;
+          </pre
+            >
+          </div>
+        </article>
+        <br />
+        <article>
+          <h2>For example CSS Combinator</h2>
+          <p>
+            ตัวอย่างการใช้งาน comainator Descendant Select จะเป็นการเลือก
+            element ที่อยู่ด้านในทั้งหมด ตัวอย่างการใช้งาน
+          </p>
+          <pre>
+            &lt;style&gt;
+              div p {
+                background-color: skyblue;
+              }
+            &lt;/style&gt;
+            --------------------------------------------------
+            &lt;article&gt;
+  &lt;h1&gt;Descendant Selector&lt;/h1&gt;
+  &lt;div&gt;
+    &lt;p&gt;Descendant Selector 1&lt;/p&gt;
+    &lt;p&gt;Descendant Selector 2&lt;/p&gt;
+    &lt;section&gt;
+      &lt;p&gt;Descendant Selector 3&lt;/p&gt;
+      &lt;p&gt;Descendant Selector 4&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Descendant Selector 5&lt;/p&gt;
+  &lt;p&gt;Descendant Selector 6&lt;/p&gt;
+</article>
+
+          </pre>
+          <img src="/img/combinator.png" alt="">
+        </article>
+      </div>
+    </div>
+    
+    <div>
+      <h1>Reviews 2 </h1>
+      <table>
+        <th>Property</th>
+        <th>Values</th>
+        <th colspan='2'>Unit</th>
+        <tr>
+          <td>คุณสมบัติของ css เช่น width, height, position</td>
+          <td>คือค่าของ property นั้นๆ ครับ เช่น 500px สำหรับความกว้าง</td>
+          <td><ul>
+            <h4>Absolute</h4>
+            <li>cm (centimeters)</li>
+            <li>mm (millimeters)</li>
+            <li>in (inches)</li>
+            <li>px  (pixels)</li>
+            <li>pt (points)</li>
+            <li>pc (picas</li>
+          </ul>
+          </td>
+          <td><ul>
+            <h4>Relative</h4>
+            <li>em (Relative to the font size</li>
+            <li>ex (Relative to x-height of the current font</li>
+            <li>ch (Relative to width of the 0</li>
+            <li>rem (Relative to font-size of the root element</li>
+            <li>vw (Relative 1% on width of the viewport</li>
+            <li>vh (Relative 1% on height of the hight viewport</li>
+            <li>vmin (Relative1% of viewport * small dimersion</li>
+            <li>vmax (Relative to 1% viewport * large dimersion</li>
+            <li>% (Relative to the parent element</li>
+          </ul></td>
+        </tr>
+      </table>
+
+      <br><br><br>
+      <h1>By Piriya codecamp 9</h1>
+    </div>
+  </body>
+</html>
+>>>>>>> cf1023eb842fb2aa6387d6faf8879c164ce860a9

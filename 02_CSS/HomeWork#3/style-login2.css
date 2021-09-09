@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(240, 242, 245);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  text-align: start;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+main > div {
+  /* background-color: rgb(240, 242, 245);
+  padding: 1.8rem;
+  margin: 1.5rem 0 1.5rem 1.5rem;
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 400px;
+  font-size: 20px;
+  width: 300px; */
+  padding-top: 60px;
+  flex-basis: 40%;
+}
+div > h1 {
+  color: #1877f2;
+  font-size: 70px;
+  font-weight: 1000;
+}
+form {
+  display: flex;
+  /* flex-grow:1;
+            flex-shrink:1;
+            flex-basis: 10%; */
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #fff;
+  margin: 2rem 2rem 2rem 0;
+  width: 380px;
+  border-radius: 5px 5px;
+}
+
+form > *:not(hr) {
+  width: 95%;
+  margin: 10px;
+  height: 3em;
+  border-radius: 6px 6px;
+  font-size: 16px;
+}
+.btn-login {
+  background-color: #1877f2;
+  font-size: 16px;
+  padding: 0 16px;
+  color: #fff;
+}
+.btn-register {
+  background-color: #42b72a;
+  position: relative;
+  left: 20%;
+  font-size: 16px;
+  padding: 0 16px;
+  color: #fff;
+  width: 50%;
+}
+form > a {
+}
+
+footer {
+    display: inline-block;
+    text-align: center;
+    width: 90%;
+}
+
+div > a {
+    margin: 5px;
+}

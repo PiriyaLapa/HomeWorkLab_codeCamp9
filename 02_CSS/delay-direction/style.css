@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.header {
+  text-transform: capitalize;
+  font-size: 3rem;
+  background-color: bisque;
+  text-align: center;
+}
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 1.5rem;
+}
+.p-3 {
+  padding: 2rem;
+}
+.p-4 {
+  padding: 3rem;
+}
+/* m-1 = margin*/
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 1.5rem;
+}
+.m-3 {
+  margin: 2rem;
+}
+.m-4 {
+  margin: 3rem;
+}
+.mx-c {
+  margin: auto;
+}
+.mx-1 {
+  margin: 1rem;
+}
+.mx-2 {
+  margin: 1.5rem;
+}
+.mx-3 {
+  margin: 2rem;
+}
+.mx-4 {
+  margin: 3rem;
+}
+.box-1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-direction: reverse;
+}
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+.box-2 {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-direction: normal;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.box-3 {
+  background-color: greenyellow;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  animation-name: animation-box3;
+  animation-duration: 0.7s;
+  animation-direction: reverse;
+}
+
+@keyframes animation-box3 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.box-4 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: animation-alternate;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+@keyframes animation-alternate {
+  0% {
+    background-color: yellow;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.container {
+  width: 30%;
+  margin: auto;
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Review04</title>
+  </head>
+  <body>
+    <h1>Review04 by Piriya</h1>
+    <article>
+      <h2>Postion คืออะไร และ มี อะไรบ้าง?</h2>
+      <table>
+        <th>position คืออะไร</th>
+        <th>มีออะไรบ้าง</th>
+        <tr>
+          <td>
+            Position คือะไร property หนึ่งของ CSS
+            เอาไว้กำหนดประเภทของการวางตำแหน่งของ element ต่างๆ บน layout ของเรา
+          </td>
+          <td>
+            <ul>
+              <li>Static</li>
+              <li>Relative</li>
+              <li>Absolute</li>
+              <li>Fixed</li>
+              <li>Sticky</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <h3>การใช้งาน Static</h3>
+      <div id="boxStatic" class="box">static 1</div>
+      <div id="boxStatic" class="box">static 2</div>
+      <br />
+      <table>
+        <th>CSS</th>
+        <th>HTML</th>
+        <tr>
+          <td>
+            <pre>
+#boxStatic {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+  border: 1px solid #4f5e5d;
+  height: 60px;
+  width: 60px;
+  background-color: #f3827c;
+}
+	    </pre
+            >
+          </td>
+          <td>
+            <pre>
+&lt;div id="boxStatic"&gt;static 1&lt;/div&gt;
+&lt;div id="boxStatic"&gt;static 2&lt;/div&gt;
+	</pre
+            >
+          </td>
+        </tr>
+      </table>
+      <p>
+        ปกติแล้ว element default ที่ไม่ได้มีการกำหนดค่า ให้กับ element
+        ตัวPositon จะเป็น static อยู่แล้ว คือ มีจะ render ตามลำดับ document flow
+      </p>
+    </article>
+    <article>
+      <h2>Relative</h2>
+      <div id="boxStatic" class="box">Static1</div>
+      <div id="boxRelative" class="box">Relative2</div>
+      <div id="boxStatic" class="box">Static3</div>
+      <table>
+        <th>CSS</th>
+        <th>HTML</th>
+        <tr>
+          <td>
+            <pre>
+#boxRelative {
+  position: relative;
+  top: 40px;
+  left: 40px;
+  background-color: #4f5e5d;
+}
+			      </pre
+            >
+          </td>
+          <td>
+            <pre>
+&lt;div id="boxStatic" class="box"&gt;Static1&lt;/div&gt;
+&lt;div id="boxRelative" class="box"&gt;Relative2&lt;/div&gt;
+&lt;div id="boxStatic" class="box"&gt;Static3&lt;/div&gt;
+	    </pre
+            >
+          </td>
+        </tr>
+      </table>
+      <p>
+        การวางตำแหน่งของ element doucmentflow เช่นเดียวกับ static
+        แต่มันสามารถใช้ Property สำหรับเลื่อนตำแหน่ง element top, bottom,
+        left,right ซึ่งไม่มีผล กับ static
+      </p>
+    </article>
+    <article>
+      <h2>การใช้งาน absolute</h2>
+      <div class="relative">
+        4 Relative
+        <div class="relative">
+          3 Relative
+          <div class="static">
+            2 Static
+            <div class="static">
+              1 Static
+              <div class="absolute">absolute</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <table>
+        <th>CSS</th>
+        <th>HTML</th>
+        <tr>
+          <td>
+            <pre>
+.static {
+  position: static;
+  padding: 5px;
+  border: solid 1px;
+}
+
+.relative {
+  position: relative;
+  padding: 5px;
+  border: 2px solid blue;
+}
+
+.absolute {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  padding: 5px;
+  background: #f3827c;
+}
+            </pre>
+          </td>
+          <td>
+            <pre>
+      &lt;div class="relative"&gt;
+        4 Relative
+        &lt;div class="relative"&gt;
+          3 Relative
+          &lt;div class="static"&gt;
+            2 Static
+            &lt;div class="static"&gt;
+              1 Static
+              &lt;div class="absolute"&gt;absolute&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+            </pre>
+          </td>
+        </tr>
+      </table>
+      <p>
+        position absolute จะทำงานเริ่มในตำแหน่งที่ไม่ใช่ Static จากตัวอย่าง div
+        absoute จะเลื่อนไปเริ่มต้นที่ div Relative ก่อน
+      </p>
+    </article>
+    <article>
+      <h2>การใช้งาน Fixed</h2>
+      <div class="static"">
+        <div class="static">static</div>
+        <div class="fixed">fixed</div>
+        <div class="static">static</div>
+      </div>
+      <table>
+        <th>CSS</th>
+        <th>HTML</th>
+        <tr>
+          <td>
+            <pre>
+.fixed {
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  padding: 5px;
+  background: lightpink;
+}
+            </pre>
+          </td>
+          <td>
+            <pre>
+&lt;div class="static"&gt;static&lt;/div&gt;
+&lt;div class="fixed"&gt;fixed&lt;/div&gt;
+&lt;div class="static"&gt;static&lt;/div&gt;
+            </pre>
+          </td>
+        </tr>
+      </table>
+      <p>การใช้งาน position fixed หากเรา set top 0 ; left: 0 ตัว element จะ ไปเริ่มต้มที่ตำแหน่ง บน ซ้าย สุดของจอและ element จะถูกล็อคตำแหน่งไม่ให้เลื่อนไปตามหน้า page</p>
+    </article>
+    <article>
+      <h2>การใช้งาน Sticky</h2>
+     <p>position ตัวนี้จะมีความพิเศษซึ่งการทำงานของมันปกติจะเป็นแบบ relative แต่ถ้าเรา scroll จนมัน ตกจากจุด view point เมื่อไหร่มันจะทำตัวเป็น position fixed ทันที</p> 
+    </article>
+    <hr />
+    <article>
+      <h2>z-index คืออะไรใช้อย่างไร</h2>
+      <table>
+        <th>z-index คือ</th>
+        <th>ใช้อย่างไร?</th>
+        <tr>
+          <td>โดยปกติแล้วเราจะรู้จัก แกน x(นอน),y(ตั้ง) ซึ่งเราจะเห็นแค่สองมิติเท่านั้น แต่การที่เราจะเห็นภาพลึก หรือ ภาพที่ดูซ้อนกันนะเราต้องรู้จักแกน z-index โดยให้เราคิดเหมือนว่าวัตถุที่อยู่บนเส้น z-index จะเดินหน้าเข้ามาหาเรายิ่งเข้าใกล้เรามากเท่าไหร่ค่าจะเป็นบวกเท่านั้น ซึ่งกันสามารถประยุกต์ใช้กับงานซ้อน element ได้ </td>
+          <td >
+            <div class="relative">
+              <div class="box">box1</div>
+              <div class="box2">box2</div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <table>
+        <th>CSS</th>
+        <th>HTML</th>
+        <tr>
+          <td>
+            <pre>
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+  border: 1px solid #4f5e5d;
+  height: 60px;
+  width: 60px;
+  background-color: #f3827c;
+}
+.box2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+  border: 1px solid #4f5e5d;
+  height: 60px;
+  width: 60px;
+  background-color: green;
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  z-index: 2;
+}
+
+            </pre>
+          </td>
+          <td>
+            <pre>
+&lt;div class="relative"&gt;
+&lt;div class="box"&gt;box1&lt;/div&gt;
+&lt;div class="box2"&gt;box2&lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+          </td>
+        </tr>
+      </table>
+    </article>
+  </body>
+</html>

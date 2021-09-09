@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card h1 {
+  border: 1px solid black;
+  width: 70%;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.card-main {
+  margin: auto;
+}
+.my-1 {
+  margin: 1rem auto;
+}
+.my-2 {
+  margin: 1.5rem auto;
+}
+.my-3 {
+  margin: 2rem auto;
+}

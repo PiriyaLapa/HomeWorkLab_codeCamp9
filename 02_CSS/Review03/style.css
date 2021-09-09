@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 3px;
+}
+table {
+  margin: 20px;
+}
+
+li {
+  list-style: none;
+}

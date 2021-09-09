@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 3px;
+  border-radius: 3px;
+}
+ul li {
+  list-style: none;
+}
+
+#boxStatic {
+  position: static;
+}
+#boxRelative {
+  position: relative;
+  top: 40px;
+  left: 40px;
+  background-color: #4f5e5d;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+  border: 1px solid #4f5e5d;
+  height: 60px;
+  width: 60px;
+  background-color: #f3827c;
+}
+.box2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+  border: 1px solid #4f5e5d;
+  height: 60px;
+  width: 60px;
+  background-color: green;
+  position: absolute;
+  left: 40px;
+  top: -25px;
+  z-index: 2;
+}
+#boxAbsolute {
+  position: absolute;
+}
+.static {
+  position: static;
+  padding: 5px;
+  border: solid 1px;
+}
+
+.relative {
+  position: relative;
+  padding: 5px;
+  border: 2px solid blue;
+}
+
+.absolute {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  padding: 5px;
+  background: #f3827c;
+}
+.fixed {
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  padding: 5px;
+  background: lightpink;
+}
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}

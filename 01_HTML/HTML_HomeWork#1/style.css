@@ -1,0 +1,23 @@
+<<<<<<< HEAD
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+>>>>>>> cf1023eb842fb2aa6387d6faf8879c164ce860a9

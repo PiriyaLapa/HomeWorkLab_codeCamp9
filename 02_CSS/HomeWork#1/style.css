@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  background-color: #b7d1f8;
+}
+.card {
+  background-color: #ed9474;
+  display: inline-table;
+  margin: 20px;
+  color: #fff;
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 8px 8px 8px gray;
+}
+.card img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+.container h4 {
+  margin-bottom: 8px;
+}
+.container p {
+  margin-top: 10px;
+}
+h1 {
+  text-align: center;
+  color: black;
+}

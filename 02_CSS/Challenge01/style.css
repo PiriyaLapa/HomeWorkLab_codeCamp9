@@ -1,0 +1,89 @@
+<<<<<<< HEAD
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+/* .center {
+  border: 2px solid #ffff00;
+  text-align: center;
+} */
+/* h1 {
+  text-align: center;
+} */
+
+table,
+th,
+td {
+  padding: 4px;
+}
+
+table {
+  border: 1px solid #63647f;
+}
+#inputURL {
+  width: 50%;
+  float: left;
+}
+
+button i {
+  padding: 2px;
+  background-color: #f0b13a;
+}
+input,
+select,
+td p {
+  float: right;
+  border-radius: 3px;
+}
+#formSetup {
+  background-color: gray;
+  color: whitesmoke;
+  padding: 12px;
+}
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+/* .center {
+  border: 2px solid #ffff00;
+  text-align: center;
+} */
+/* h1 {
+  text-align: center;
+} */
+
+table,
+th,
+td {
+  padding: 4px;
+}
+
+table {
+  border: 1px solid #63647f;
+}
+#inputURL {
+  width: 50%;
+  float: left;
+}
+
+button i {
+  padding: 2px;
+  background-color: #f0b13a;
+}
+input,
+select,
+td p {
+  float: right;
+  border-radius: 3px;
+}
+#formSetup {
+  background-color: gray;
+  color: whitesmoke;
+  padding: 12px;
+}
+>>>>>>> cf1023eb842fb2aa6387d6faf8879c164ce860a9

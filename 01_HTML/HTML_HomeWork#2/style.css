@@ -1,0 +1,45 @@
+<<<<<<< HEAD
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+table {
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+tr,
+td {
+  margin: 10px;
+  padding: 10px;
+}
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+table {
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+tr,
+td {
+  margin: 10px;
+  padding: 10px;
+}
+>>>>>>> cf1023eb842fb2aa6387d6faf8879c164ce860a9

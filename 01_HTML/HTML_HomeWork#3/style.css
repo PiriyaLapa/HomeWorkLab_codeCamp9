@@ -1,0 +1,41 @@
+<<<<<<< HEAD
+table {
+  font-family: arial, sans-serif;
+  font-size: 2vw;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.container {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+=======
+table {
+  font-family: arial, sans-serif;
+  font-size: 2vw;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.container {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+>>>>>>> cf1023eb842fb2aa6387d6faf8879c164ce860a9
