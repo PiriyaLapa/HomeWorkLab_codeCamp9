@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exercise 11</title>
+</head>
+
+<body>
+	<script>
+		/*
+
+   *     **   ***
+   n=1   n=2  n=3
+*/
+		const draw1 = (n) => {
+			let result = "";
+			for (let i = 0; i < n; i++) {
+				result += "*"
+			};
+			console.log(result);
+		};
+		draw1(4);
+
+		/*
+		
+		   *    **   ***
+			**   ***
+			     ***
+		   n=1  n=2  n=3
+		*/
+		const draw2 = (n) => {
+			let result = "";
+			for (let i = 0; i < n; i++) {
+				for (let j = 0; j < n; j++) {
+					result += "*"
+				};
+				result += "\n";
+			};
+			console.log(result);
+		};
+		draw2(4);
+
+		/*
+		
+		 1     12     123
+		       12     123
+			      123
+		n=1    n=2    n=3
+		*/
+		const draw3 = (n) => {
+			let result = "";
+			for (let i = 0; i < n; i++) {
+				for (let j = 0; j < n; j++) {
+					result += j + 1;
+				};
+				result += "\n";
+			}
+			console.log(result);
+		};
+		draw3(4);
+
+		/*
+				       1111
+			     111       2222
+		     11      222       3333
+		     22      333       4444
+		   n = 2    n = 3     n = 4
+		*/
+		const draw4 = (n) => {
+			let result = "";
+			for (let i = 0; i < n; i++) {
+				for (let j = 0; j < n; j++) {
+					result += i + 1;
+				};
+				result += "\n";
+			}
+			console.log(result);
+		};
+		draw4(4);
+
+		/*                     4444
+			     333       3333
+		     22      222       2222
+		     11      111       1111
+		   n = 2    n = 3     n = 4
+		*/
+		const draw5 = (n) => {
+			let result = "";
+			for (let i = 0; i < n; i++) {
+				for (let j = 0; j < n; j++) {
+					result += n - i;
+				};
+				result += "\n";
+			};
+			console.log(result);
+		};
+		draw5(4);
+
+		/*
+				      1234
+			     123      5678
+		     12      456      9101112
+		     34      789      13141516
+		  n = 2    n = 3     n = 4
+		*/
+		const draw6 = (n) => {
+			let result = "";
+			let c = 0;
+			for (let i = 0; i < n * n; i++) {
+				result += i + 1;
+				c++;
+				if ((c % n) == 0) {
+					result += "\n";
+				}
+			}
+			console.log(result);
+		};
+		draw6(4);
+
+		/*
+				       16151413
+			     987       1211109
+		     43      654       8765
+		     21      321       4321
+		   n = 2    n = 3     n = 4
+		*/
+		const draw7 = (n) => {
+			let result = "";
+			let c = 0;
+			for (let i = 0; i < n * n; i++) {
+				result += n * n - i;
+				c++;
+				if ((c % n) == 0) {
+					result += "\n";
+				}
+			}
+			console.log(result);
+		}
+		draw7(4);
+
+		/*
+					0
+			      0         2
+		     0        2         4
+		     2        4         6
+		   n = 2    n = 3     n = 4
+		*/
+		const draw8 = (n) => {
+			let result = "";
+			for (let i = 0; i < n; i++) {
+				result += i * 2;
+				result += "\n";
+			}
+			console.log(result);
+		}
+		draw8(4);
+
+		/*
+					2
+			      2         4
+		     2        4         6
+		     4        6         8
+		   n = 2    n = 3     n = 4
+		*/
+		const draw9 = (n) => {
+			let result = "";
+			for (let i = 0; i < n; i++) {
+				result += 2 * (i + 1);
+				result += "\n";
+			};
+			console.log(result);
+		};
+		draw9(4);
+
+		/*
+				       1234
+			     123       2468
+		     12      246       36912
+		     24      369       481216
+		   n = 2    n = 3      n = 4
+		*/
+		const draw10 = (n) => {
+			let result = "";
+			let c = 0;
+			for (let i = 0; i < n * n; i++) {
+				result += i + 1;
+				c++;
+				if ((c % n) == 0) {
+					result += "\n";
+				};
+			};
+			console.log(result);
+		};
+		draw10(4);
+
+	</script>
+</body>
+
+</html>
