@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exercise09</title>
+</head>
+
+<body>
+	<script>
+		// เชขที่ถูก alert อันดับสุดท้าย
+		let i = 3;
+		while (i) {
+			alert(i--);
+		} // 1 คือเลขสุดท้าย
+
+		// เขียนลูปแสดง 2-10
+		for (let i = 2; i <= 10; i++) {
+			console.log(i)
+		}
+
+		// เกมทายตัวเลข
+		i = parseInt(prompt("Enter target:"))
+		while (true) {
+			let guess = parseInt(prompt("Enter guess:"));
+			if (guess == i) {
+				alert("Your guess is correct!");
+				break;
+			} else if (guess > i) {
+				alert("Your guess was too large");
+			} else if (guess < i) {
+				alert("Your guess was too small");
+			}
+		}
+
+	</script>
+</body>
+
+</html>

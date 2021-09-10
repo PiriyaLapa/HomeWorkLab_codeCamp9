@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exersice08</title>
+</head>
+
+<body>
+	<script>
+		// 1. Final values
+
+		alert(null || 2 || undefined); // 2
+		alert(alert(1) || 2 || alert(3)); // 2
+		alert(1 && null && 2); // null
+		alert(alert(1) && alert(2)); // undefined
+		alert(null || 2 && 3 || 4); // 3
+
+		// 2. เช็คอายุระหว่าง 18-60
+		if (age >= 18 && age <= 60) {
+			console.log("true");
+		}
+
+		// 3. เช็คอายุไม่ระหว่าง 18 - 60
+		if (age < 18 || age > 60) {
+			console.log("true");
+		}
+
+		// 4. alert ไหนจะรันบ้าง
+		if (-1 || 0) alert("first") // runs
+		if (-1 && 0) alert("second") // does not run
+		if (null || -1 && 0) alert("third") // does not run
+
+		// 5. เขียนระบบ simple login
+		username = prompt("Username:", "Admin");
+		if (username === "Admin") {
+			let password = prompt("Password:", "codecamp#5");
+			if (password === "codecamp#5") {
+				alert("Welcome");
+			} else {
+				alert("Invalid password");
+			}
+		} else if (username === null || username === "") {
+			alert("Canceled")
+		} else {
+			alert("Invalid username");
+		}
+
+	</script>
+</body>
+
+</html>
