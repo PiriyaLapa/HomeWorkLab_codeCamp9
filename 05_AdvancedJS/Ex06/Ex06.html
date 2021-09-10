@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex06</title>
+</head>
+
+<body>
+    <script>
+        // 1
+        function Calculator() {
+            this.read = () => {
+                this.n1 = Number(prompt("Enter 1st value: "));
+                this.n2 = Number(prompt("Enter 2nd value: "));
+            }
+            this.sum = () => {
+                return this.n1 + this.n2;
+            }
+            this.mul = () => {
+                return this.n1 * this.n2;
+            }
+        }
+
+        const cal = new Calculator();
+        cal.read();
+        console.log(cal.sum());
+        console.log(cal.mul());
+
+        // 2
+        function Accumulator(startingValue) {
+            this.val = startingValue;
+            this.read = () => {
+                let temp = Number(prompt("Enter the number"));
+                this.val += temp;
+            }
+        };
+
+        let accumulator = new Accumulator(0);
+        accumulator.read();
+        accumulator.read();
+        console.log(accumulator.val);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex08</title>
+</head>
+
+<body>
+    <script>
+        // 1 - capitalize first letter
+        const ucFirst = (s) => {
+            return s[0].toUpperCase() + s.slice(1);
+        };
+
+        console.log(ucFirst('foo'));
+
+        // 2 - check spam keywords
+        const checkSpam = (s) => {
+            if (s.includes("xxx") || s.includes("viagra")) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        console.log(checkSpam("xxxHamster"));
+        console.log(checkSpam("Normal text"));
+        console.log(checkSpam("better than viagra"));
+
+        // 3 - truncate and replace with "..."
+        const truncate = (s, len) => {
+            if (s.length > len) {
+                return s.slice(0, len) + "..."
+            } else {
+                return s
+            }
+        }
+
+        console.log(truncate("test", 3));
+
+        // 4 - extract currency value
+        const extractCurrencyValue = (s, x) => {
+            return Number(s.slice(1)) * x
+        }
+
+        console.log(extractCurrencyValue("$2", 33))
+
+    </script>
+</body>
+
+</html>

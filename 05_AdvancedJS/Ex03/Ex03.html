@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercise03</title>
+
+<body>
+    <script>
+        // 1
+
+        const obj0 = {}
+
+        while (true) {
+            let k = prompt("Enter key: ", "stop");
+            if (k == 'stop') {
+                break;
+            } else {
+                let v = prompt("Enter value: ");
+                obj[k] = v;
+            };
+        };
+
+        console.log(obj0);
+
+        // 2
+
+        const obj1 = {};
+
+        while (true) {
+            let k = prompt("Enter key: ", "stop");
+            if (k == 'stop') {
+                break;
+            } else {
+                let v = Number(prompt("Enter value: "));
+                if (v > 1) {
+                    k += "s";
+                }
+                obj1[k] = v;
+            };
+        };
+
+        console.log(obj1);
+
+    </script>
+</body>
+
+</html>

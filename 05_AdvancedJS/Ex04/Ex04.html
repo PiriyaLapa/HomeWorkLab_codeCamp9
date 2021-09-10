@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex04</title>
+</head>
+
+<body>
+    <script>
+        // 1
+        const obj0 = {};
+        obj0['name'] = "Sonter";
+        obj0['surname'] = "Pakorn";
+        obj0['name'] = "Boy";
+        delete obj0['name'];
+
+        // 2
+        // Object with a key and its value
+        const obj1 = {
+            key: "value"
+        };
+
+        // Empty object
+        const obj2 = {};
+
+        const isEmpty = (obj) => {
+            for (let k in obj) {
+                return false;
+            };
+            return true;
+        };
+
+        console.log(isEmpty(obj1));
+        console.log(isEmpty(obj2));
+
+        // 3
+        // Will this block of code throw an error: answer no error
+        {
+            const user = {
+                name: "John"
+            };
+            user.name = "Pete";
+        }
+
+        // 4
+        const obj3 = {
+            "Employee 1": 2000,
+            "Employee 2": 1000
+        };
+
+        const sum = (obj) => {
+            let sum = 0;
+            for (let k in obj) {
+                sum += obj[k];
+            };
+            return sum;
+        };
+
+        console.log(sum(obj3));
+
+        // 5
+        const obj4 = {
+            "number1": 2,
+            "string1": "v",
+            "number2": 4,
+            "string2": "k"
+        };
+
+        const multiplyNumeric = (obj, times) => {
+            const out = {};
+            for (let k in obj) {
+                if (typeof (obj[k]) == "number") {
+                    out[k] = obj[k] * times
+                };
+            };
+            return out;
+        };
+
+        console.log(multiplyNumeric(obj4, 2));
+
+    </script>
+</body>
+
+</html>

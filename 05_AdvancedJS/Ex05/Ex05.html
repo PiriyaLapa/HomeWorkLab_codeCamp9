@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex05</title>
+</head>
+
+<body>
+    <script>
+        // 1
+        let user = {
+            name: "John",
+            go: function () {
+                alert(this.name)
+            }
+        };
+
+        user.go();
+        // alerts "John"
+
+        // 2
+        function makeUser() {
+            return {
+                name: "John",
+                ref: this
+            };
+        };
+
+        let user = makeUser();
+        alert(user.ref.name);
+        // undefined
+
+        // 3
+        let calculator = {
+            read() {
+                this.n1 = prompt("Enter 1st value: ");
+                this.n2 = prompt("Enter 2nd value: ");
+            },
+            sum() {
+                return this.n1 + this.n2;
+            },
+            mul() {
+                return this.n1 * this.n2;
+            }
+        };
+
+
+        calculator.read();
+        console.log(calculator.sum());
+        console.log(calculator.mul());
+
+        // 4
+        let ladder = {
+            step: 0,
+            up() {
+                this.step++;
+                return this;
+            },
+            down() {
+                this.step--;
+                return this;
+            },
+            showStep() {
+                console.log(this.step);
+            }
+        };
+
+        ladder.up().up().down().showStep();
+
+    </script>
+</body>
+
+</html>

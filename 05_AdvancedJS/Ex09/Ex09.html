@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex09</title>
+</head>
+
+<body>
+    <script>
+        // Arrays
+        // 1
+        {
+            const fruits = ["Apple", "Pear", "Orange"];
+            const shoppingCart = fruits;
+            shoppingCart.push("Banana");
+            console.log(fruits.length) // 4 - because arrays are passed by reference
+        }
+
+        // 2
+        {
+            const styles = ["Jazz", "Blues"];;
+
+            styles.push('Rock-n-Roll');
+            console.log(styles);
+
+            styles[1] = 'Classics';
+            console.log(styles);
+
+            styles.shift();
+            console.log(styles);
+
+            styles.unshift('Rap', 'Reggae');
+            console.log(styles);
+        }
+
+        // 3
+        {
+            const sumInput = () => {
+                let arr = [];
+                while (true) {
+                    let n = Number(prompt("Enter number", "done"));
+                    if (isNaN(n)) {
+                        break;
+                    }
+                    arr.push(n);
+                }
+
+                return arr.reduce((total, item) => {
+                    return total += item;
+                }, 0);
+            };
+
+            console.log(sumInput());
+        }
+
+    </script>
+</body>
+
+</html>
