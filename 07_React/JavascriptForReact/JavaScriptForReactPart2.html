@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Prototypal inheritance</title>
+</head>
+
+<body>
+	<script>
+		console.log('Prototypal inheritance');
+		console.log('2.7.1 แบบฝึกหัด');
+		let animal = {
+			jumps: null
+		};
+
+		let rabbit = {
+			jumps: true,
+			__proto__: animal
+		}
+
+		console.log(rabbit.jumps);// (1)  ? => true 
+		delete rabbit.jumps;
+		console.log(rabbit.jumps); // 2  ->  null
+		delete rabbit.jumps;
+		console.log(rabbit.jumps); // 3 ->null 
+
+		console.log('แบบฝึกหัด 2.7.2 ')
+		console.log('ใช้__proto__ในการกำนหนด prototype boject ดังนี้')
+		console.log('pockets -> bed -> table -> head')
+		let pockets = {
+			money: 2000,
+		}
+		let bed = {
+			__proto__: pockets,
+			sheet: 1,
+			pillow: 2
+		}
+		let table = {
+			__proto__: bed,
+			pen: 3,
+		}
+
+		let head = {
+			__proto__: table,
+			glasses: 1
+		}
+		console.log(head);
+
+		console.log('2.7 แบบฝึกหัด ')
+		console.log('3. การเขียนโค๊ดแบบนี้ Object ไหนจะเป็นคนได้ property full ไป')
+
+		let animal2 = {
+			eat() {
+				this.full = true;
+			}
+		}
+
+		let rabbit2 = {
+			__proto__: animal2
+		};
+
+		rabbit2.eat();
+		console.log(rabbit2); // rabbit2 got this.full 
+
+
+	</script>
+</body>
+
+</html>
