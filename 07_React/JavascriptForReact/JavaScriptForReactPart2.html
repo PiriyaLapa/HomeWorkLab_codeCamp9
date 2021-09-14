@@ -61,11 +61,38 @@
 		let rabbit2 = {
 			__proto__: animal2
 		};
-
 		rabbit2.eat();
 		console.log(rabbit2); // rabbit2 got this.full 
+		console.log('F. Prototype');
 
 
+
+		// 3. F.prototype
+		// 3.4 1. จากโค๊ดต่อไปนี้มีการสร้าง new Rabbit()
+		console.log('1. จากโค้ด ต่อไปนี้มีการสร้าง new Rabbit()');
+		function RabbitF() {
+			// statment...
+		}
+		RabbitF.prototype = {
+			eats: true
+		};
+
+		let rabbitFF = new RabbitF();
+		// RabbitF.prototype = {}; //case#1 
+		// RabbitF.prototype.eats = false; // case#2
+		// delete rabbitFF.eats;  // #case 3 
+		delete RabbitF.prototype.eats;
+		console.log('answer : ', rabbitFF.eats); //   case#1 :  true , case#2: false, case#3: true case#4 :undifined 
+
+		// *********************//
+
+		// 3.4 แบบฝึกหัด
+		// 2 ถ้าเราต้องการสร้างใช้ constructor ของ obj เราสามารเขียนแบบนี้ได้ไหม
+		let out1 = {
+			ran: true
+		}
+		let obj2 = new out1();
+		// แบบนี้ทำไม่ได้
 	</script>
 </body>
 
