@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Destructuring</title>
+</head>
+
+<body>
+	<script>
+		// โจทย์ การบ้าน Destructuring
+		// 5.7.1
+		console.log('แบบฝึกหัด 5.7 Desturing');
+		console.log('ข้อ 1');
+		let user = {
+			name: 'John',
+			years: 30,
+		}
+
+		let adminUser = {
+			...user,
+			isAdmin: true
+		}
+		const { name, years: age, isAdmin = null } = adminUser;
+		console.log(adminUser);// name : 'john' , age:30, isAdmin ture'
+		console.log('ข้อ 2 คืนชื่อผู้ที่มีเงินเดือนเยอะที่สุด')
+
+		//5.7.2
+		let salaries = {
+			'john': 100,
+			'Pete': 300,
+			'Mary': 250
+		}
+		function topSalary(salaries) {
+			let max = null;
+			let previouseMax = 0;
+			for (const key in salaries) {
+				if (salaries[key] > previouseMax) {
+					previouseMax = salaries[key];
+					max = key;
+				}
+			}
+			return max;
+		}
+		console.log(salaries);
+		console.log(topSalary(salaries));
+
+
+
+	</script>
+</body>
+
+</html>
