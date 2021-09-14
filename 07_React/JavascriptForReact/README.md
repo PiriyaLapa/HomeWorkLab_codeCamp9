@@ -78,6 +78,15 @@
 			rabbit.eat();
 
 	
+# 4. NaTive prototype
+## 4.6 แบบฝึกหัด
+	1. ให้เพิ่ม Method defer เข้าไปใน prototypes ของทุกฟังก์ชัน โดย Method  นี้ จะทำหน้าที่ alrt ข้อความออกมาหลังไป 1 ms
+	function f(){
+		aler('Hello!');
+	}	
+	f.defer(1000); // แสดง Hello ! หลังผ่านไป  1 วิ
+
+	2. ให้เพิิ่ม Method defer เข้าในไปใน prototypes ของทุกฟังก์ชัน โดย Method นี้ จะทำหน้าที่ return Function ให้ aler(a+b) เมื่อผ่านไป 1 ms
 ## By
 	Name: piriya Lapa
 	Codecamp: 9 online

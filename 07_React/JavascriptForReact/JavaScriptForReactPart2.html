@@ -88,11 +88,23 @@
 
 		// 3.4 แบบฝึกหัด
 		// 2 ถ้าเราต้องการสร้างใช้ constructor ของ obj เราสามารเขียนแบบนี้ได้ไหม
-		let out1 = {
-			ran: true
+		// let out1 = {
+		// 	ran: true
+		// }
+		// // แบบนี้ทำไม่ได้
+		function f(time) {
+			setTimeout(() => {
+				console.log('Hello')
+			}, time)
+
 		}
-		let obj2 = new out1();
-		// แบบนี้ทำไม่ได้
+
+		Object.prototype.defer = function () {
+			return this.f;
+		}
+
+		f.defer(1000);
+		console.log(Object.prototype)
 	</script>
 </body>
 
