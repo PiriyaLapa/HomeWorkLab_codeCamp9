@@ -95,19 +95,14 @@
 
 
 		// แบบฝีกหัด
-		function f(time) {
-			setTimeout(() => {
+		Object.prototype.defer = function (time) {
+			setTimeout((time) => {
 				console.log('Hello')
 			}, time)
-
 		}
-
-		Object.prototype.defer = function () {
-			return this.f;
-		}
-
+		let f = new Object();
 		f.defer(1000);
-		console.log(Object.prototype)
+
 
 
 

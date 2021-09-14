@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		class User {
+			constructor(name) {
+				this.name = name
+			}
+			sayHi() {
+				console.log(`Hello ${this.name}`);
+			}
+		}
+
+		let user = new User('Benz');
+		user.sayHi();// BBenz
+
+		class Hero {
+			constructor(name, power) {
+				this.name = name;
+				this.power = power;
+			}
+			fly() {
+				console.log(`${this.name} can fly`);
+			}
+			hide() {
+				console.log(`${this.name} can hidet and ${this.power}`);
+			}
+		}
+
+		const kevin = new Hero('kevin', 'lighting');
+		const Benz = new Hero('Benz', 'fire');
+		kevin.hide();
+		Benz.hide();
+		console.log(typeof Hero);
+
+		// เขียน class User ในรูปแปป pure functions
+		function User2(name) {
+			this.name = name
+		}
+		User2.prototype.sayHi2 = function (time) {
+			setTimeout((time) => {
+				console.log('Hello hero', this.name)
+			}, time)
+		}
+
+		let newBenz = new User2('newBenz');
+		newBenz.sayHi2(2000);
+	</script>
+</body>
+
+</html>
