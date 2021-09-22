@@ -1,20 +1,52 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const arr = ['a', 'b', 'c', 'd', 'e'];
-const nonKey = arr.map(item => <li>{item}</li>);
-const haveKey = arr.map(item => <li key={item}>{item}</li>);
-
-const App = () => {
-  return (
-    <div>
-      <h1>List and Key in React Lab 1</h1>
-      <h3>Non key in</h3>
-      <p title='NonKey'>{nonKey}</p>{' '}
-      {/** Warning: Each child in a list should have a unique "key" prop. */}
-      <h3>Have key in</h3>
-      <p title='haveKey'>{haveKey}</p> {/** จะไม่ show Warning */}
-    </div>
-  );
-};
+class Acomponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.surname = 'lapa';
+  }
+  render() {
+    return (
+      <div>
+        <h1>A Component {this.props.nameprops}</h1>
+        <Bcomponent test={this.props.nameprops} />
+      </div>
+    );
+  }
+}
+class Bcomponent extends React.Component {
+  render() {
+    return (
+      <div>
+        <h2>B component</h2>
+        <h2>{this.props.test}</h2>
+        <Ccomponent test={this.props.test} />
+      </div>
+    );
+  }
+}
+class Ccomponent extends React.Component {
+  render() {
+    return (
+      <div>
+        <h4>{this.props.test}</h4>
+        <h3>{this.name}</h3>
+      </div>
+    );
+  }
+}
+class App extends React.Component {
+  showName = () => {
+    return <div>MercedesBenz</div>;
+  };
+  render() {
+    return (
+      <div>
+        Hello world
+        <Acomponent nameprops={this.showName()} />
+      </div>
+    );
+  }
+}
 ReactDOM.render(<App />, document.getElementById('root'));
